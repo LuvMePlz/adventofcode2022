@@ -21,7 +21,7 @@ func main() {
 	}
 	defer file.Close()
 
-	var max int
+	var max = make([]int, 3)
 	var value int
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
@@ -41,12 +41,18 @@ func main() {
 	if err := scanner.Err(); err != nil {
 		fmt.Println(err)
 	}
+
+	var result = 0
+	for _, v := range max {
+		result += v
+	}
 	fmt.Println(max)
+	fmt.Println(result)
 }
 
-func updateMax(max int, value int) int {
-	if max < value {
-		max = value
+func updateMax(max []int, value int) []int {
+	if max[2] < value {
+		max = append(max[1:3], value)
 		fmt.Println(max)
 	}
 	return max
