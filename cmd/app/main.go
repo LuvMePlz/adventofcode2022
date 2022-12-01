@@ -51,9 +51,13 @@ func main() {
 }
 
 func updateMax(max []int, value int) []int {
-	if max[2] < value {
-		max = append(max[1:3], value)
-		fmt.Println(max)
+	for i, v := range max {
+		if v < value {
+			max = append(max[0:i+1], max[i:2]...)
+			max[i] = value
+			fmt.Println(max)
+			break
+		}
 	}
 	return max
 }
