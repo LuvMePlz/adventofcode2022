@@ -7,5 +7,5 @@ import (
 
 func main() {
 	fmt.Println(daytwo.TaskOne())
-	//fmt.Println(dayone.TaskTwo())
+	fmt.Println(daytwo.TaskTwo())
 }
