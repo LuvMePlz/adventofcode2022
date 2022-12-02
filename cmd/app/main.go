@@ -1,11 +1,11 @@
 package main
 
 import (
-	"adventofcode/internal/dayone"
+	"adventofcode/internal/daytwo"
 	"fmt"
 )
 
 func main() {
-	fmt.Println(dayone.TaskOne())
-	fmt.Println(dayone.TaskTwo())
+	fmt.Println(daytwo.TaskOne())
+	//fmt.Println(dayone.TaskTwo())
 }

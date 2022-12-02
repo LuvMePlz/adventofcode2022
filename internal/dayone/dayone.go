@@ -5,19 +5,14 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+
+	"adventofcode/internal/inputReader"
 )
 
 func TaskOne() int {
-	filePath, err := os.Getwd()
+	file, err := inputReader.OpenInputFileReader("\\data\\input1.txt")
 	if err != nil {
 		fmt.Println(err)
-	}
-	filePath += "\\data\\input.txt"
-
-	file, err := os.Open(filePath)
-	if err != nil {
-		fmt.Println(err)
-		fmt.Println(filePath)
 	}
 	defer file.Close()
 
