@@ -1,5 +1,10 @@
 package main
 
+import (
+	"adventofcode/internal/dayfour"
+	"fmt"
+)
+
 func main() {
-	// fmt.Println(daythree.TaskTwo())
+	fmt.Println(dayfour.TaskTwo())
 }
